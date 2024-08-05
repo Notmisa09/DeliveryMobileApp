@@ -9,6 +9,13 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  sqflite: ^2.0.0+3
+  path: ^1.8.0
+  provider: ^6.0.3
+  shared_preferences: ^2.0.13
+
+assets:
+  - deliveryappproject\lib\assets
 
 dev_dependencies:
   flutter_test:
