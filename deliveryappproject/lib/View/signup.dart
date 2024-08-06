@@ -37,7 +37,7 @@ class _SignUpState extends State<SignUp> {
                       style: TextStyle(
                           fontSize: 50,
                           fontWeight: FontWeight.bold,
-                          color: Colors.deepPurple),
+                          color: Color.fromARGB(255, 26, 30, 22)),
                     ),
                   ),
                   Container(
@@ -46,7 +46,7 @@ class _SignUpState extends State<SignUp> {
                         horizontal: 10, vertical: 6),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8),
-                      color: Colors.deepPurple.withOpacity(.2),
+                      color: Color.fromARGB(255, 215, 180, 63).withOpacity(.2),
                     ),
                     child: TextFormField(
                       controller: username,
@@ -69,7 +69,7 @@ class _SignUpState extends State<SignUp> {
                         horizontal: 10, vertical: 6),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8),
-                      color: Colors.deepPurple.withOpacity(.2),
+                      color: Color.fromARGB(255, 215, 180, 63).withOpacity(.2),
                     ),
                     child: TextFormField(
                       controller: password,
@@ -105,7 +105,7 @@ class _SignUpState extends State<SignUp> {
                         horizontal: 10, vertical: 6),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8),
-                      color: Colors.deepPurple.withOpacity(.2),
+                      color: Color.fromARGB(255, 215, 180, 63).withOpacity(.2),
                     ),
                     child: TextFormField(
                       controller: confirmPassword,
@@ -143,7 +143,7 @@ class _SignUpState extends State<SignUp> {
                     width: MediaQuery.of(context).size.width * .9,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8),
-                      color: Colors.deepPurple,
+                      color: Colors.black,
                     ),
                     child: TextButton(
                       onPressed: () {
