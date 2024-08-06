@@ -1,6 +1,6 @@
 import 'package:deliveryappproject/Database%20src/sqlite.dart';
 import 'package:deliveryappproject/Model/Users.dart';
-import 'package:deliveryappproject/View/anotherpage.dart';
+import 'package:deliveryappproject/View/restaurant_list.dart';
 import 'package:deliveryappproject/View/signup.dart';
 import 'package:flutter/material.dart';
 
@@ -34,8 +34,9 @@ Future<void> login() async {
   if (response == true) {
     // Si el login es correcto, navega a la pantalla principal
     Navigator.pushReplacement(
+      // ignore: use_build_context_synchronously
       context,
-      MaterialPageRoute(builder: (context) => const HomePage()),
+      MaterialPageRoute(builder: (context) => RestaurantListScreen()),
     );
   } else {
     // Si el login falla, muestra el mensaje de error
@@ -72,7 +73,7 @@ Future<void> login() async {
                         horizontal: 10, vertical: 6),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8),
-                      color: Color.fromARGB(255, 215, 180, 63).withOpacity(.2),
+                      color: const Color.fromARGB(255, 215, 180, 63).withOpacity(.2),
                     ),
                     child: TextFormField(
                       controller: usernameController,
@@ -95,7 +96,7 @@ Future<void> login() async {
                         horizontal: 10, vertical: 6),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8),
-                      color: Color.fromARGB(255, 215, 180, 63).withOpacity(.2),
+                      color: const Color.fromARGB(255, 215, 180, 63).withOpacity(.2),
                     ),
                     child: TextFormField(
                       controller: passwordController,
@@ -131,7 +132,7 @@ Future<void> login() async {
                     width: MediaQuery.of(context).size.width * .9,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8),
-                      color: Color.fromARGB(255, 19, 18, 19),
+                      color: const Color.fromARGB(255, 19, 18, 19),
                     ),
                     child: TextButton(
                       onPressed: () {

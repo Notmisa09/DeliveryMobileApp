@@ -46,7 +46,7 @@ class _SignUpState extends State<SignUp> {
                         horizontal: 10, vertical: 6),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8),
-                      color: Color.fromARGB(255, 215, 180, 63).withOpacity(.2),
+                      color: const Color.fromARGB(255, 215, 180, 63).withOpacity(.2),
                     ),
                     child: TextFormField(
                       controller: username,
@@ -69,7 +69,7 @@ class _SignUpState extends State<SignUp> {
                         horizontal: 10, vertical: 6),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8),
-                      color: Color.fromARGB(255, 215, 180, 63).withOpacity(.2),
+                      color: const Color.fromARGB(255, 215, 180, 63).withOpacity(.2),
                     ),
                     child: TextFormField(
                       controller: password,
@@ -105,7 +105,7 @@ class _SignUpState extends State<SignUp> {
                         horizontal: 10, vertical: 6),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8),
-                      color: Color.fromARGB(255, 215, 180, 63).withOpacity(.2),
+                      color: const Color.fromARGB(255, 215, 180, 63).withOpacity(.2),
                     ),
                     child: TextFormField(
                       controller: confirmPassword,
