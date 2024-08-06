@@ -59,10 +59,12 @@ Future<void> login() async {
               key: formKey,
               child: Column(
                 children: [
-                  Image.asset(
-                    "lib/assets/login.png",
-                    width: 210,
-                  ),
+          // Icono principal
+                const Icon(
+                   Icons.fastfood,
+                    size: 150,
+                    color: Colors.orange,
+                   ),
                   const SizedBox(height: 15),
                   Container(
                     margin: const EdgeInsets.all(8),
@@ -70,7 +72,7 @@ Future<void> login() async {
                         horizontal: 10, vertical: 6),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8),
-                      color: Colors.deepPurple.withOpacity(.2),
+                      color: Color.fromARGB(255, 215, 180, 63).withOpacity(.2),
                     ),
                     child: TextFormField(
                       controller: usernameController,
@@ -93,7 +95,7 @@ Future<void> login() async {
                         horizontal: 10, vertical: 6),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8),
-                      color: Colors.deepPurple.withOpacity(.2),
+                      color: Color.fromARGB(255, 215, 180, 63).withOpacity(.2),
                     ),
                     child: TextFormField(
                       controller: passwordController,
@@ -129,7 +131,7 @@ Future<void> login() async {
                     width: MediaQuery.of(context).size.width * .9,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8),
-                      color: Colors.deepPurple,
+                      color: Color.fromARGB(255, 19, 18, 19),
                     ),
                     child: TextButton(
                       onPressed: () {
