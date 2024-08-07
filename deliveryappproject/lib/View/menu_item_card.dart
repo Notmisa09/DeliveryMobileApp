@@ -13,7 +13,7 @@ class MenuItemCard extends StatelessWidget {
     return Card(
       child: Column(
         children: [
-          Image.asset(menuItem.imageUrl),
+          Image.asset(menuItem.imageUrl, width: 130,),
           Text(menuItem.name),
           Text(menuItem.description),
           Text('Precio: ${menuItem.price}'),
@@ -25,8 +25,15 @@ class MenuItemCard extends StatelessWidget {
                 SnackBar(content: Text('${menuItem.name} agregado al carrito'))
               );
             },
-            child: const Text('Agregar al carrito'),
-          ),
+        style: ButtonStyle(
+    backgroundColor:  WidgetStateProperty.all<Color>(Colors.black), // Establece el color de fondo aquí
+  ),
+            child: const Text(
+           'Agregar al carrito',
+         style: TextStyle(color: Colors.white
+         ),
+        ),        
+        ),
         ],
       ),
     );

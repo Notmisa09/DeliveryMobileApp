@@ -6,8 +6,7 @@ import 'package:flutter/material.dart';
 class CartScreen extends StatelessWidget {
   final List<CartItem> cartItems;
 
-  // ignore: use_key_in_widget_constructors
-  const CartScreen({required this.cartItems});
+  const CartScreen({super.key, required this.cartItems});
 
   @override
   Widget build(BuildContext context) {
@@ -16,10 +15,25 @@ class CartScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Carrito'),
+        backgroundColor: Colors.orange, // Estilo similar al login
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.fastfood),
+            onPressed: () {
+              // Acción opcional para el logo
+            },
+          ),
+        ],
       ),
       body: cartItems.isEmpty
           ? const Center(
-              child: Text('Carrito vacío'),
+              child: Text(
+                'Carrito vacío',
+                style: TextStyle(
+                  fontSize: 18,
+                  color: Colors.black54,
+                ),
+              ),
             )
           : Column(
               children: [
@@ -27,7 +41,24 @@ class CartScreen extends StatelessWidget {
                   child: ListView.builder(
                     itemCount: cartItems.length,
                     itemBuilder: (context, index) {
-                      return CartItemCard(cartItem: cartItems[index]);
+                      return Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(8),
+                            color: Colors.white, // Fondo blanco para las tarjetas de los artículos
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black.withOpacity(0.1),
+                                spreadRadius: 1,
+                                blurRadius: 5,
+                                offset: const Offset(0, 3),
+                              ),
+                            ],
+                          ),
+                          child: CartItemCard(cartItem: cartItems[index]),
+                        ),
+                      );
                     },
                   ),
                 ),
@@ -36,15 +67,32 @@ class CartScreen extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text('Total: \$${totalPrice.toStringAsFixed(2)}'),
+                      Text(
+                        'Total: \$${totalPrice.toStringAsFixed(2)}',
+                        style: const TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
                       ElevatedButton(
                         onPressed: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => const OrderConfirmationScreen()),
+                            MaterialPageRoute(
+                              builder: (context) => const OrderConfirmationScreen(),
+                            ),
                           );
                         },
-                        child: const Text('Pagar'),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: const Color.fromARGB(255, 19, 18, 19), // Color similar al botón de login
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                        ),
+                        child: const Text(
+                          'Pagar',
+                          style: TextStyle(color: Colors.white),
+                        ),
                       ),
                     ],
                   ),

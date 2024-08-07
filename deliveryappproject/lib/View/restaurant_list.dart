@@ -5,7 +5,6 @@ import 'package:deliveryappproject/View/cart_screen.dart';
 import 'package:deliveryappproject/View/restaurant_card.dart';
 import 'package:flutter/material.dart';
 
-// ignore: use_key_in_widget_constructors
 class RestaurantListScreen extends StatelessWidget {
   final List<Restaurant> restaurants = [
     // Example restaurants
@@ -27,6 +26,14 @@ class RestaurantListScreen extends StatelessWidget {
         title: const Text('Restaurantes'),
         actions: [
           IconButton(
+              icon: const Icon(Icons.fastfood, color: Colors.black),
+             // Ruta del logo
+            onPressed: () {
+              // Opcional: Acción al presionar el logo
+
+            },
+          ),
+          IconButton(
             icon: const Icon(Icons.shopping_cart),
             onPressed: () {
               Navigator.push(
@@ -36,12 +43,19 @@ class RestaurantListScreen extends StatelessWidget {
             },
           ),
         ],
+        backgroundColor: Colors.orange, // Color del AppBar similar al login
       ),
-      body: ListView.builder(
-        itemCount: restaurants.length,
-        itemBuilder: (context, index) {
-          return RestaurantCard(restaurant: restaurants[index], cartItems: cartItems);
-        },
+      body: Container(
+        color: const Color.fromARGB(255, 215, 180, 63).withOpacity(.2), // Fondo similar al de los campos de texto en el login
+        child: ListView.builder(
+          itemCount: restaurants.length,
+          itemBuilder: (context, index) {
+            return Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: RestaurantCard(restaurant: restaurants[index], cartItems: cartItems),
+            );
+          },
+        ),
       ),
     );
   }
