@@ -46,7 +46,8 @@ class CartScreen extends StatelessWidget {
                         child: Container(
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(8),
-                            color: Colors.white, // Fondo blanco para las tarjetas de los artículos
+                            color: Colors
+                                .white, // Fondo blanco para las tarjetas de los artículos
                             boxShadow: [
                               BoxShadow(
                                 color: Colors.black.withOpacity(0.1),
@@ -79,12 +80,14 @@ class CartScreen extends StatelessWidget {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => const OrderConfirmationScreen(),
+                              builder: (context) =>
+                                  const OrderConfirmationScreen(),
                             ),
                           );
                         },
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: const Color.fromARGB(255, 19, 18, 19), // Color similar al botón de login
+                          backgroundColor: const Color.fromARGB(255, 19, 18,
+                              19), // Color similar al botón de login
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(8),
                           ),

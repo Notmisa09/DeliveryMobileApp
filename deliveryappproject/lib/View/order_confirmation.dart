@@ -1,3 +1,4 @@
+import 'package:deliveryappproject/View/restaurant_list.dart';
 import 'package:flutter/material.dart';
 
 class OrderConfirmationScreen extends StatelessWidget {
@@ -6,6 +7,19 @@ class OrderConfirmationScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(builder: (context) => RestaurantListScreen()),
+            );
+          },
+        ),
+        backgroundColor: Colors.green, // Mismo color que el fondo de la pantalla
+        elevation: 0, // Quita la sombra para un diseño más limpio
+      ),
       body: Container(
         color: Colors.green,
         child: const Center(

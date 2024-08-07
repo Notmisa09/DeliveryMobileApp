@@ -20,7 +20,12 @@ class MenuItemCard extends StatelessWidget {
           ElevatedButton(
             onPressed: () {
               // Agregar al carrito
-              cartItems.add(CartItem(id: menuItem.id, name: menuItem.name, price: menuItem.price));
+              cartItems.add(CartItem(
+                id: menuItem.id,
+                name: menuItem.name, 
+                price: menuItem.price, 
+                imageUrl: menuItem.imageUrl
+                ));
               ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(content: Text('${menuItem.name} agregado al carrito'))
               );
