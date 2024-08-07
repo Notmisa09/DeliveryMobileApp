@@ -24,5 +24,24 @@ flutter:
   assets:
     - assets/images/pizza_margarita.jpg
     - assets/images/restaurant_capriccio.jpg
+    - assets/images/calzone_pizza.jpg
+    - assets/images/cerdo_teriyaki.jpg
+    - assets/images/chow_fan_camarones.jpeg
+    - assets/images/dominican_paradise.jpg
+    - assets/images/el_arabito.jpg
+    - assets/images/habibi_platter.jpg
+    - assets/images/jugo_flor_jamaica.png
+    - assets/images/lasagna.jpg
+    - assets/images/pasta_carbonara.jpg
+    - assets/images/pita_&_falafel.jpg
+    - assets/images/pollo_teriyaki.jpg
+    - assets/images/res_teriyaki.jpg
+    - assets/images/Paletas_Frutales.jpg
+    - assets/images/Brownie_Valentino.jpg
+    - assets/images/tartalini.jpg
+    - assets/images/Waffle_Valentino.jpg
+    - assets/images/restaurant_helados_valentino.jpeg
+    - assets/images/restaurant_hummus.jpg
+    - assets/images/restaurant_jade.jpg
 
   uses-material-design: true
